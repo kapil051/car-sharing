@@ -1,13 +1,14 @@
 import express from "express";
 import axios from 'axios';
 import path from "path";
-import mongoose from "mongoose";
 import bodyParser from "body-parser";
+import mongoose from "./db/dbConnection.js";
+
 
 const app=express();
 const port=3000;
 
-app.set('view engine', 'ejs');1
+app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 

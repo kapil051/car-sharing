@@ -4,7 +4,9 @@ import path from "path";
 import bodyParser from "body-parser";
 import mongoose from "./db/dbConnection.js";
 import signupRoutes from './routes/signupRoute.js';
-
+import signinRoute from './routes/signinRoute.js';
+import logoutRoute from './routes/logoutRoute.js';
+ 
 
 const app=express();
 const port=3000;
@@ -14,6 +16,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 app.use('/',signupRoutes);
+app.use('/',signinRoute);
+app.use('/',logoutRoute);
 
 app.get('/', (req, res) => {  
       res.render("authentication.ejs");

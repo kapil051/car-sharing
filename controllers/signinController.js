@@ -1,5 +1,7 @@
 import User from "../models/signupmodel.js"
 
+  let currentUser={};
+
    const signinController={ 
 
          findUser: async (req,res)=>{
@@ -12,8 +14,18 @@ import User from "../models/signupmodel.js"
                    const userEmail=await User.findOne({email}); 
                    const userPassword=await User.findOne({password});
 
+                  //     console.log(userEmail,userPassword);
+
                       if(userEmail&&userPassword){
+
+                            console.log("hello");
+
+                        currentUser={
+                              username:userEmail.username,
+                        };
+
                         res.render("home.ejs",{user:userEmail});
+
                       } 
 
                      else if(userEmail&&!userPassword){
@@ -26,7 +38,7 @@ import User from "../models/signupmodel.js"
                     }  
 
               }catch(e){
-                   console.error("user registration failed!");
+                   console.error("user registration failed!",e);
                   return res.status(500).json({error:"user registration failed"});
               }
          },
@@ -34,3 +46,5 @@ import User from "../models/signupmodel.js"
    };
 
 export default signinController; 
+
+   export {currentUser};

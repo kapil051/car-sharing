@@ -6,6 +6,7 @@ import mongoose from "./db/dbConnection.js";
 import signupRoutes from './routes/signupRoute.js';
 import signinRoute from './routes/signinRoute.js';
 import logoutRoute from './routes/logoutRoute.js';
+import homeRoute from './routes/homeRoute.js';
  
 
 const app=express();
@@ -18,6 +19,7 @@ app.use(express.static("public"));
 app.use('/',signupRoutes);
 app.use('/',signinRoute);
 app.use('/',logoutRoute);
+app.use('/',homeRoute);
 
 app.get('/', (req, res) => {  
       res.render("authentication.ejs");

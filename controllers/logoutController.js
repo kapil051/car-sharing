@@ -7,4 +7,4 @@ import user from "../models/signupmodel.js"
         }
   };
 
-  export default logoutController
+  export default logoutController;

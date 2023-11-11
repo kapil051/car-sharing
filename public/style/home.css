@@ -43,13 +43,44 @@
 
 .mid1{
        height: 360px;
-        /* border: 2px solid #00aff5; */
           border-radius: 8px;
-         margin: 12px;
-         background-image: url(/assets/one.svg);
+           margin: 12px;
+           background-image: url(/assets/one.svg);
           background-repeat: no-repeat;
            background-size: cover;
              background-position: center;
+}
+
+.mid1-form{
+          display: flex;
+          justify-content: center;
+}
+
+.mid1-form form{
+     display: flex;
+      gap: 30px;
+}
+
+.mid1-input{
+       background-color:#00aff5;
+         height: 18px;
+         border-radius: 12px;
+         border: 1px solid #00aff5 ;
+           width: 300px;
+            margin-top: 20px;
+             font-size: 16px;
+               padding: 8px;
+}
+
+.mid1-button{
+     background-color:#00aff5; 
+     height: 35px;
+     border-radius: 12px;
+     border: 1px solid #00aff5 ;
+     width: 100px;
+     padding: 8px;  
+     cursor: pointer;
+     margin-top: 20px;
 }
 
 .mid1 form input{

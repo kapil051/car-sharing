@@ -30,12 +30,19 @@
 
          <div class="mid1">
 
-                   <form action="/POST">
-                        <i class="fa-solid fa-location-dot"></i> <input  type="text" placeholder="  ...Leaving from">
-                        <i class="fa-solid fa-location-dot"></i> <input  type="text" placeholder="  ...Going to">
-                   </form>
+              <div class="mid1-form">
 
-                    
+                <form action="/submit-ride-details" method="post">
+
+                  <div> <i class="fa-solid fa-location-dot"></i> <input class="mid1-input"  type="text" name="source" placeholder="  ...Leaving from" ></div>    
+                  <div> <i class="fa-solid fa-location-dot"></i> <input class="mid1-input"  type="text" name="destination" placeholder="  ...Going to"></div>  
+                  <div><button class="mid1-button" type="submit">Submit</button></div> 
+
+                 </form>
+
+              </div>
+
+                   
 
          </div>
 

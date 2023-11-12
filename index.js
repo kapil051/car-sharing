@@ -7,6 +7,7 @@ import signupRoutes from './routes/signupRoute.js';
 import signinRoute from './routes/signinRoute.js';
 import logoutRoute from './routes/logoutRoute.js';
 import homeRoute from './routes/homeRoute.js';
+import userWantRide from './routes/userWantRideRoute.js'
  
 
 const app=express();
@@ -20,6 +21,7 @@ app.use('/',signupRoutes);
 app.use('/',signinRoute);
 app.use('/',logoutRoute);
 app.use('/',homeRoute);
+app.use('/',userWantRide);
 
 app.get('/', (req, res) => {  
       res.render("authentication.ejs");

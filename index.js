@@ -8,6 +8,7 @@ import signinRoute from './routes/signinRoute.js';
 import logoutRoute from './routes/logoutRoute.js';
 import homeRoute from './routes/homeRoute.js';
 import userWantRide from './routes/userWantRideRoute.js'
+import publishRideRoute from './routes/publishRideRoute.js'
  
 
 const app=express();
@@ -22,6 +23,12 @@ app.use('/',signinRoute);
 app.use('/',logoutRoute);
 app.use('/',homeRoute);
 app.use('/',userWantRide);
+app.use('/',publishRideRoute);
+
+
+app.get('/publishRide',(req,res)=>{
+        res.render('publishRide.ejs');
+})
 
 app.get('/', (req, res) => {  
       res.render("authentication.ejs");

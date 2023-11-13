@@ -8,10 +8,22 @@ import Rides from '../models/rideDetailsModel.js';
          const src=req.body.source;
          const dest=req.body.destination;
 
-            const allRidesFromSourceToDestination=await Rides.findMany({source:src,destination:dest});
+         try {
+            // Assuming your Ride model has a find method
+            const allRidesFromSourceToDestination = await Rides.find({
+              source: src,
+              destination: dest,
+            });
+      
+                  //console.log(allRidesFromSourceToDestination);
+      
+                res.render('ridesDetails.ejs',{allRidesFromSourceToDestination});
 
-            //         console.log(src,dest);
-            //   console.log(allRidesFromSourceToDestination);
+                   // res.json(allRidesFromSourceToDestination);
+          } catch (error) {
+               console.error(error);
+            res.status(500).json({ error: 'Internal Server Error' });
+          }
 
     }
 

@@ -3,6 +3,6 @@ import publishRideController from '../controllers/publishRideController.js'
 
     const router=express.Router();
 
-    router.post('/publishRide',publishRideController.addRide);
+    router.post('/publish-ride',publishRideController.addRide);
 
  export default router;

@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/publishRide.css">
-    <title>Ride Details Form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publish Ride</title>
+  <link rel="stylesheet" href="/style/publishRide.css">
 </head>
 <body>
-    <div class="form-container">
-        <h2>Ride Details</h2>
-        <form action="/publishRide" method="post">
-            <label for="source">Source:</label>
-            <input type="text" id="source" name="source" required>
+  <h1>Publish Ride</h1>
 
-            <label for="destination">Destination:</label>
-            <input type="text" id="destination" name="destination" required>
+  <div class="ride-form">
+    <form action="/publish-ride" method="post">
+      <label for="source">Source:</label>
+      <input type="text" id="source" name="source" required>
 
-            <label for="price">Price:</label>
-            <input type="number" id="price" name="price" required>
+      <label for="destination">Destination:</label>
+      <input type="text" id="destination" name="destination" required>
 
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+      <label for="price">Total Price For 1 Passenger:</label>
+      <input type="number" id="price" name="price" required>
+
+      <label for="time">Total Expected Time:</label>
+      <input type="text" id="time" name="time" required>
+
+      <label for="carName">Car Name:</label>
+      <input type="text" id="carName" name="carName" required>
+
+      <label for="instruction">Drivers Instructions:</label>
+      <textarea id="instruction" name="instruction" rows="4" required></textarea>
+
+      <button type="submit">Publish Ride</button>
+    </form>
+  </div>
+
 </body>
 </html>
+

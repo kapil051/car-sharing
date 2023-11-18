@@ -2,13 +2,14 @@ import Rides from '../models/rideDetailsModel.js';
 
 
      const publishRideController={
+
             addRide: async (req,res)=>{
                 
                  try{
-
-                    const newRide=new Rides(req.body);
+                         //  console.log(req.body);
+                     const newRide=new Rides(req.body);
                      const savedRide=await newRide.save();
-    
+      
                       res.status(200).json({message:'ride saved successfully',ride:savedRide});     
 
                  }catch(e){

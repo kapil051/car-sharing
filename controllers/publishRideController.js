@@ -6,7 +6,6 @@ import Rides from '../models/rideDetailsModel.js';
             addRide: async (req,res)=>{
                 
                  try{
-                         //  console.log(req.body);
                      const newRide=new Rides(req.body);
                      const savedRide=await newRide.save();
       
